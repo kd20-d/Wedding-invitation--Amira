@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7f3ed">
+
+<title>دعوة زفاف أميرة ومحمد</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #eeeae4;
+    color: #4b403c;
+    font-family: Arial, Tahoma, sans-serif;
+}
+
+.page {
+    width: min(100%, 760px);
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: #f8f5f0;
+    box-shadow: 0 0 30px rgba(70,55,45,.12);
+}
+
+.page img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* صورة الغلاف */
+.cover {
+    cursor: pointer;
+    position: relative;
+}
+
+.cover::after {
+    content: "اضغطي لفتح الدعوة";
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,.86);
+    color: #695b53;
+    border: 1px solid rgba(145,125,105,.45);
+    padding: 10px 20px;
+    border-radius: 24px;
+    font-size: 14px;
+    backdrop-filter: blur(5px);
+}
+
+/* صورة موقع القاعة */
+.venue {
+    cursor: pointer;
+}
+
+.hint {
+    text-align: center;
+    padding: 13px 10px 25px;
+    background: #f8f5f0;
+    color: #756860;
+    font-size: 13px;
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <!-- الصفحة الأولى -->
+    <section class="cover"
+             onclick="openInvitation()"
+             aria-label="افتح الدعوة">
+
+        <img src="C:\Users\hp\Desktop\Wedding-Amira-Mohamed\images\01_open_invitation.jpg"
+             alt="افتح دعوتك">
+
+    </section>
+
+
+    <!-- الأسماء والتاريخ -->
+    <section id="invitation">
+
+        <img src="C:\Users\hp\Desktop\Wedding-Amira-Mohamed\images\02_names_date.jpg"
+             alt="أميرة ومحمد - 03 سبتمبر 2026">
+
+    </section>
+
+
+    <!-- تفاصيل الحفل -->
+    <section>
+
+        <img src="C:\Users\hp\Desktop\Wedding-Amira-Mohamed\images\03_wedding_details.jpg"
+             alt="تفاصيل حفل الزفاف">
+
+    </section>
+
+
+    <!-- موقع القاعة -->
+    <section class="venue"
+             onclick="goToVenue()"
+             aria-label="افتح موقع القاعة">
+
+        <img src="C:\Users\hp\Desktop\Wedding-Amira-Mohamed\images\04_venue.jpg"
+             alt="موقع القاعة في بجاية">
+
+    </section>
+
+
+    <div class="hint">
+        نسعد بحضوركم ومشاركتكم لنا فرحتنا 🤍
+    </div>
+
+</main>
+
+
+<script>
+
+/* فتح الدعوة */
+function openInvitation() {
+
+    document
+        .getElementById("invitation")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+/* فتح موقع القاعة عند الضغط على الصورة رقم 4 */
+function goToVenue() {
+
+    window.open(
+        "https://www.google.com/maps/search/?api=1&query=%D9%82%D8%A7%D8%B9%D8%A9+%D8%A7%D9%84%D8%AD%D9%81%D9%84%D8%A7%D8%AA+%D8%A8%D8%AC%D8%A7%D9%8A%D8%A9",
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
